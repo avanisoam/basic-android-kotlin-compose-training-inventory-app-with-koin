@@ -17,18 +17,23 @@
 package com.example.inventory
 
 import android.app.Application
-import com.example.inventory.data.AppContainer
-import com.example.inventory.data.AppDataContainer
+import com.example.inventory.data.di.dataBaseModule
+import com.example.inventory.data.di.repositoryModule
+import com.example.inventory.data.di.viewModelModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class InventoryApplication : Application() {
-
-    /**
-     * AppContainer instance used by the rest of classes to obtain dependencies
-     */
-    lateinit var container: AppContainer
-
     override fun onCreate() {
         super.onCreate()
-        container = AppDataContainer(this)
+
+        startKoin{
+            androidContext(this@InventoryApplication)
+            modules(
+                dataBaseModule,
+                repositoryModule,
+                viewModelModule
+            )
+        }
     }
 }

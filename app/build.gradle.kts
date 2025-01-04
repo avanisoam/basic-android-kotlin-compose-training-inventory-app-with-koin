@@ -85,4 +85,8 @@ dependencies {
     // Testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
+
+    implementation ("io.insert-koin:koin-android:3.3.0")
+    implementation ("io.insert-koin:koin-androidx-navigation:3.3.0")
+    implementation ("io.insert-koin:koin-androidx-compose:3.3.0")
 }
