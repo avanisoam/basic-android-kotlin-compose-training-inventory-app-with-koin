@@ -1,4 +1,4 @@
-Inventory app
+Inventory app with Koin [Medium Article](https://medium.com/@avanisoam/implementing-koin-dependency-injection-in-jetpack-compose-068d7c33105b),
 ==================================
 
 Solution code for Android Basics with Compose.
